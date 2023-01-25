@@ -1,7 +1,7 @@
 {
-  "name": "new-project",
+  "name": "clever-budy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Школа английского языка – учебный проект",
   "main": "gulpfile.js",
   "author": "Ivan Monichev",
   "license": "ISC",
@@ -33,7 +33,6 @@
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-stylelint": "^13.0.0",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
@@ -42,10 +41,10 @@
     "gulp-zip": "^5.1.0",
     "path": "^0.12.7",
     "sass": "^1.57.1",
-    "stylelint": "^13.13.1",
+    "stylelint": "14.16.1",
     "stylelint-config-recess-order": "^3.1.0",
     "stylelint-config-standard-scss": "^6.1.0",
-    "webp-converter": "^2.2.3",
+    "webp-converter": "2.2.3",
     "webpack": "^5.75.0",
     "webpack-stream": "^7.0.0"
   }

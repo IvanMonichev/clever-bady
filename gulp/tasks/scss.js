@@ -7,7 +7,6 @@ import groupCssMediaQueries from 'gulp-group-css-media-queries';
 import webpcss from 'gulp-webpcss';
 import replace from "gulp-replace";
 import sourceMaps from "gulp-sourcemaps";
-import gulpStylelint from "gulp-stylelint";
 
 const sass = gulpSass(dartSass);
 
@@ -23,17 +22,6 @@ export const scss = () =>
         message: "Error: <%= error.message %>"
       })
     ))
-    .pipe(app.plugins.if(
-      app.isDev,
-      gulpStylelint({
-        reporters: [
-          {
-            formatter: 'string',
-            console: true
-          }
-        ]
-      }))
-    )
     .pipe(sass({
       outputStyle: 'expanded',
     }))
