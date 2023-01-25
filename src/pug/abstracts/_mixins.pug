@@ -1,0 +1,6 @@
+mixin external-link (url, text)
+  a(href=`${url}` target='_blank' ref='nofollow')= text
+
+mixin image-link (url, srcImage, alt, className)
+  a(href=`${url}` target='_blank' ref='nofollow')
+    img(class=className src=require(`${srcImage}`) alt=`${alt}`)

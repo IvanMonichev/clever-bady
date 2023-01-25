@@ -1,0 +1,34 @@
+@mixin extra-large() {
+  @media screen and (max-width: $breakpoint_xl) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @media screen and (max-width: $breakpoint_lg) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @media screen and (max-width: $breakpoint_md){
+    @content;
+  }
+}
+
+@mixin small() {
+  @media screen and (max-width: $breakpoint_xs) {
+    @content;
+  }
+}
+
+//Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
