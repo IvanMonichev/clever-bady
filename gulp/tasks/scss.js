@@ -25,10 +25,11 @@ export const scss = () =>
     .pipe(sass({
       outputStyle: 'expanded',
     }))
-    .pipe(replace('../../../', '../../'))
-    .pipe(replace('../../', '../../'))
+    .pipe(replace('../../../', '/assets/'))
+    .pipe(replace('../../', '/assets/'))
     .pipe(groupCssMediaQueries())
-    .pipe(webpcss(
+    .pipe(
+      webpcss(
       {
         webpClass: '.webp',
         noWebpClass: '.no-webp'
@@ -48,7 +49,7 @@ export const scss = () =>
       app.isBuild,
       cleanCss()))
     .pipe(rename({
-      basename: "styles",
+      basename: 'styles',
       extname: ".min.css"
     }))
     .pipe(app.plugins.if(

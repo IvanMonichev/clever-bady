@@ -1,27 +1,67 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  max-width: 1366px;
   min-height: 103px;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 143px 1fr 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 143px;
+    height: 23px;
+  }
 
   &__menu {
-
+    margin-left: 57px;
   }
 
   &__menu-list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    list-style: none;
   }
 
-  &__menu-item {
+  &__menu-link {
+    font-size: 16px;
+    line-height: 1.4;
+    color: $color-blue-zodiac;
+    text-decoration: none;
+    transition: opacity 0.4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__phone {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    align-items: center;
+    margin-left: auto;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__phone-icon {
+    width: 15px;
+    height: 15px;
   }
-}
 
-.inner-wrapper {
-}
-
-.logo {
+  &__phone-number {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $color-blue-zodiac;
+  }
 }

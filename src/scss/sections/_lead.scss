@@ -1,0 +1,64 @@
+.lead {
+  position: relative;
+  min-height: 512px;
+  background-image: url("../../images/toddler-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    box-sizing: content-box;
+    max-width: 375px;
+    padding: 136px 0 0 100px;
+  }
+
+  &__title {
+    margin: 0 0 2px;
+    font-family: $font-rubik-family;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.07;
+    color: $color-blue-zodiac;
+  }
+
+  &__description {
+    margin: 0 0 30px;
+    font-family: $font-rubik-family;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__text {
+    margin: 0 0 45px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__decorate-car {
+    position: absolute;
+    top: 37px;
+    left: -25px;
+    width: 100px;
+    height: 84px;
+  }
+
+  &__decorate-cloud {
+    position: absolute;
+    top: 68px;
+    right: -10px;
+    width: 91px;
+    height: 65px;
+  }
+
+  &__mask-desktop {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+  }
+}
