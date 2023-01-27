@@ -9,6 +9,7 @@ import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { otfToTtf, ttfToWoff, fonstStyle } from './gulp/tasks/fonts.js';
 import { zip } from './gulp/tasks/zip.js';
+import { videos } from './gulp/tasks/videos.js';
 
 // Глобальная переменная
 
@@ -22,13 +23,14 @@ global.app = {
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fonstStyle);
 
-const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, images));
+const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, images, videos));
 
 const watcher = () => {
   gulp.watch(path.watch.html, html);
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
+  gulp.watch(path.watch.videos, videos);
   gulp.watch(path.watch.fonts, fonts);
 };
 

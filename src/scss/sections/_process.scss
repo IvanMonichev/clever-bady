@@ -1,0 +1,49 @@
+.process {
+  margin: 130px 0 0;
+
+  &__title {
+    font-family: $font-rubik-family;
+    font-size: 36px;
+    line-height: 1.4;
+    color: $color-blue-zodiac;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    column-gap: 86px;
+  }
+
+  &__content-box {
+  }
+
+  &__content-text {
+  }
+}
+
+.inner-wrapper {
+}
+
+.text-block {
+  &__title {
+  }
+
+  &__paragraph {
+  }
+}
+
+.video-block {
+  &__preview {
+  }
+
+  &__video-player {
+  }
+
+  &__btn-play {
+  }
+}
+
+.vedeo-block {
+  &__title {
+  }
+}

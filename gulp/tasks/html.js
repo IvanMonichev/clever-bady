@@ -19,10 +19,7 @@ export const html = () =>
     ))
     .pipe(replace('../../', 'assets/'))
     .pipe(replace('../', 'assets/'))
-    .pipe(app.plugins.if(
-      app.isBuild,
-      webpHtml()
-    ))
+    .pipe(webpHtml())
     .pipe(
       versionNumber(
       {

@@ -1,5 +1,6 @@
 import webp from 'gulp-webp';
-import imageMin from 'gulp-imagemin';
+// import imageMin from 'gulp-imagemin';
+import image from 'gulp-image';
 
 export const images = () =>
   app.gulp.src(app.path.src.images)
@@ -18,12 +19,16 @@ export const images = () =>
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.plugins.if(
       app.isBuild,
-      imageMin({
+/*      imageMin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       interlaced: true,
       optimizationLevel: 3
-    })))
+      })*/
+      image({
+        svgo: false,
+      })
+    ))
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.gulp.src(app.path.src.svg))
     .pipe(app.gulp.dest(app.path.build.images))
