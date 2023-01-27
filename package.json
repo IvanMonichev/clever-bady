@@ -9,12 +9,14 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "zip": "gulp deployZip --build"
+    "zip": "gulp deployZip --build",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
     "del": "^7.0.0",
     "fs": "^0.0.1-security",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
