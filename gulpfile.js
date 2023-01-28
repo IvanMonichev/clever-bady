@@ -27,8 +27,8 @@ const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, images, video
 
 const watcher = () => {
   gulp.watch(path.watch.html, html);
-  gulp.watch(path.watch.scss, scss);
-  gulp.watch(path.watch.js, js);
+  gulp.watch(path.watch.styles, scss);
+  gulp.watch(path.watch.scripts, js);
   gulp.watch(path.watch.images, images);
   gulp.watch(path.watch.videos, videos);
   gulp.watch(path.watch.fonts, fonts);

@@ -2,7 +2,7 @@ import webpack from 'webpack-stream';
 import sourceMaps from 'gulp-sourcemaps';
 
 export const js = () => {
-  return app.gulp.src(app.path.src.js)
+  return app.gulp.src(app.path.src.scripts)
     .pipe(app.plugins.if(
       app.isDev,
       sourceMaps.init())
@@ -16,13 +16,13 @@ export const js = () => {
     .pipe(webpack({
         mode: app.isBuild ? 'production' : 'development',
         output: {
-          filename: 'scripts.min.js',
+          filename: 'main.min.js',
         }
       }))
     .pipe(app.plugins.if(
       app.isDev,
       sourceMaps.write())
     )
-    .pipe(app.gulp.dest(app.path.build.js))
+    .pipe(app.gulp.dest(app.path.build.scripts))
     .pipe(app.plugins.browserSync.stream());
 }

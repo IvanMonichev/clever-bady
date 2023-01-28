@@ -11,7 +11,7 @@ import sourceMaps from "gulp-sourcemaps";
 const sass = gulpSass(dartSass);
 
 export const scss = () =>
-  app.gulp.src(app.path.src.scss)
+  app.gulp.src(app.path.src.styles)
     .pipe(app.plugins.if(
       app.isDev,
       sourceMaps.init())
@@ -25,8 +25,8 @@ export const scss = () =>
     .pipe(sass({
       outputStyle: 'expanded',
     }))
-    .pipe(replace('../../../', '/assets/'))
-    .pipe(replace('../../', '/assets/'))
+    .pipe(replace('../../../', '../'))
+    .pipe(replace('../../', '../'))
     .pipe(groupCssMediaQueries())
     .pipe(
       webpcss(
@@ -38,23 +38,18 @@ export const scss = () =>
     .pipe(app.plugins.if(
       app.isBuild,
       autoprefixer({
-      grid: true,
-      overrideBrowserslist: ["last 3 version"],
-      cascade: true,
+      grid: 'autoplace',
     })))
-    .pipe(app.plugins.if(
-      app.isBuild,
-      app.gulp.dest(app.path.build.css)))
     .pipe(app.plugins.if(
       app.isBuild,
       cleanCss()))
     .pipe(rename({
-      basename: 'styles',
+      basename: 'style',
       extname: ".min.css"
     }))
     .pipe(app.plugins.if(
       app.isDev,
-      sourceMaps.write())
+      sourceMaps.write('/'))
     )
-    .pipe(app.gulp.dest(app.path.build.css))
+    .pipe(app.gulp.dest(app.path.build.styles))
     .pipe(app.plugins.browserSync.stream());

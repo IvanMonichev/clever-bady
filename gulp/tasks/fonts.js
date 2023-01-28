@@ -87,7 +87,7 @@ export const fonstStyle = () => {
         }
       } else {
         // Если файл есть, выводим сообщение
-        console.log("Файл scss/fonts/fonts.scss уже существует. Для обновления файла нужно его удалить!");
+        console.log("Файл styles/fonts/fonts.styles уже существует. Для обновления файла нужно его удалить!");
 
       }
     } else {

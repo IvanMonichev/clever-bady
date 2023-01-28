@@ -1,0 +1,18 @@
+mixin external-link (url, text)
+  a(href=`${url}` target='_blank' ref='nofollow')= text
+
+mixin image-link (url, srcImage, alt, className)
+  a(href=`${url}` target='_blank' ref='nofollow')
+    img(class=className src=require(`${srcImage}`) alt=`${alt}`)
+
+mixin image(src, ext, alt)
+  picture
+    source(data-srcset='./images/' + src + '.webp' type='image/webp')
+    img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' data-src=('./images/' + src + '.' + ext) alt=alt)
+
+mixin imageAdaptive(src, ext, alt)
+  picture
+    source(data-srcset='./images/' + src + '-sm.webp'  type='image/webp' media='(max-width: 600px)')
+    source(data-srcset='./images/' + src + '-sm.' + ext media='(max-width: 600px)')
+    source(data-srcset='./images/' + src + '.webp' type='image/webp')
+    img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' data-src=('./images/' + src + '.' + ext) alt=alt)
