@@ -1,0 +1,125 @@
+.our-groups {
+  padding: 183px 0;
+  margin: 130px 0 0;
+  background-image: url("../../images/our-groups-background.png");
+  background-size: 100% 100%;
+
+  &__wrapper {
+    position: relative;
+    width: calc(100% - $margin-container-desktop);
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
+  &__decorate-star {
+    position: absolute;
+    top: -57px;
+    left: -63px;
+    width: 56px;
+    height: 56px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 57px;
+  }
+
+  &__title {
+    font-family: $font-rubik-family;
+    font-size: 36px;
+    line-height: 1.4;
+  }
+
+  &__description {
+    max-width: 350px;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  &__list-wrapper {
+    padding: 0 41px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__list-item {
+    flex-wrap: wrap;
+    width: calc((100% / 3) - 28px);
+    padding: 50px 65px;
+    margin-right: 41px;
+    border: 3px solid #8dd9e5;
+    border-radius: 12px;
+
+    &--yellow {
+      border: 3px solid #ffd787;
+    }
+
+    &--pink {
+      border: 3px solid #feb9cc;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__list-title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__list-text {
+    margin: 0 0 40px;
+    list-style: none;
+  }
+
+  &__item-list-text {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--accent {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 166px;
+    height: 50px;
+    color: $color-blue-zodiac;
+    text-decoration: none;
+    background-color: #8dd9e5;
+    border-radius: 35px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &--yellow {
+      background-color: #ffd787;
+    }
+
+    &--pink {
+      background-color: #feb9cc;
+    }
+  }
+}
