@@ -9,16 +9,24 @@ export const js = () => {
     )
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
-        title: "JS",
-        message: "Error: <%= error.message %>",
+        title: 'JS',
+        message: 'Error: <%= error.message %>',
       }))
     )
     .pipe(webpack({
-        mode: app.isBuild ? 'production' : 'development',
-        output: {
-          filename: 'main.min.js',
-        }
-      }))
+      mode: app.isBuild ? 'production' : 'development',
+      output: {
+        filename: 'main.min.js',
+      },
+      module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: ['css-loader'],
+          },
+        ],
+      }
+    }))
     .pipe(app.plugins.if(
       app.isDev,
       sourceMaps.write('/'))
