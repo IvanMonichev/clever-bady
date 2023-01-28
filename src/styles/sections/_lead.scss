@@ -5,6 +5,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &__wrapper {
+    position: relative;
+    width: calc(100% - $margin-container-desktop);
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
   &__content {
     box-sizing: content-box;
     max-width: 375px;
@@ -33,10 +40,6 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 1.4;
-  }
-
-  &__wrapper {
-    position: relative;
   }
 
   &__decorate-car {

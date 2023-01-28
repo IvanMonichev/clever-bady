@@ -7,9 +7,9 @@ import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
-import { otfToTtf, ttfToWoff, fonstStyle } from './gulp/tasks/fonts.js';
 import { zip } from './gulp/tasks/zip.js';
 import { videos } from './gulp/tasks/videos.js';
+import { copy } from './gulp/tasks/copy.js';
 
 // Глобальная переменная
 
@@ -21,9 +21,7 @@ global.app = {
   plugins
 };
 
-const fonts = gulp.series(otfToTtf, ttfToWoff, fonstStyle);
-
-const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, images, videos));
+const mainTasks = gulp.parallel(html, scss, js, images, videos, copy);
 
 const watcher = () => {
   gulp.watch(path.watch.html, html);
@@ -31,7 +29,7 @@ const watcher = () => {
   gulp.watch(path.watch.scripts, js);
   gulp.watch(path.watch.images, images);
   gulp.watch(path.watch.videos, videos);
-  gulp.watch(path.watch.fonts, fonts);
+  gulp.watch(path.watch.fonts, copy);
 };
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

@@ -21,7 +21,7 @@ export const js = () => {
       }))
     .pipe(app.plugins.if(
       app.isDev,
-      sourceMaps.write())
+      sourceMaps.write('/'))
     )
     .pipe(app.gulp.dest(app.path.build.scripts))
     .pipe(app.plugins.browserSync.stream());

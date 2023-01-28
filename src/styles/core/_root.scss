@@ -6,7 +6,10 @@
 
 .root {
   margin: 0 auto;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, sans-serif;
-  background-color: $color-white;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
   color: $color-blue-zodiac;
+  word-wrap: normal;
+  background-color: $color-white;
 }

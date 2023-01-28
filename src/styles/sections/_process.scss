@@ -1,6 +1,29 @@
 .process {
   margin: 130px 0 0;
 
+  &__wrapper {
+    position: relative;
+    width: calc(100% - $margin-container-desktop);
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
+  &__decorate-girl {
+    position: absolute;
+    top: 124px;
+    left: -148px;
+    width: 87.75px;
+    height: 114.19px;
+  }
+
+  &__decorate-rocket {
+    position: absolute;
+    top: -57px;
+    right: -42px;
+    width: 135px;
+    height: 68px;
+  }
+
   &__title {
     margin: 0 0 80px;
     font-family: $font-rubik-family;
@@ -17,16 +40,14 @@
     column-gap: 86px;
   }
 
-  &__content-box {
-    max-width: 414px;
-  }
-
   &__content-text {
     max-width: 431px;
   }
 }
 
 .text-block {
+  max-width: 431px;
+
   &__title {
     margin: 0 0 30px;
     font-size: 20px;
@@ -37,7 +58,6 @@
   &__paragraph {
     margin: 0 0 30px;
     font-size: 16px;
-    font-weight: 400;
     line-height: 1.45;
 
     &:nth-last-child {
@@ -102,10 +122,5 @@
     &:hover {
       opacity: 0.5;
     }
-  }
-}
-
-.vedeo-block {
-  &__title {
   }
 }

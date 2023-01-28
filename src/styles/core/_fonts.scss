@@ -13,10 +13,9 @@
 @font-face {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 400;
   src:
-    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("../fonts/Montserrat-Regular.woff") format("woff");
+    url("../../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../../fonts/Montserrat-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -25,8 +24,8 @@
   font-style: normal;
   font-weight: 500;
   src:
-          url("../fonts/Montserrat-Medium.woff2") format("woff2"),
-          url("../fonts/Montserrat-Medium.woff") format("woff");
+    url("../../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../../fonts/Montserrat-Medium.woff") format("woff");
   font-display: swap;
 }
 
@@ -35,7 +34,7 @@
   font-style: normal;
   font-weight: 500;
   src:
-    url("../fonts/Rubik-Medium.woff2") format("woff2"),
-    url("../fonts/Rubik-Medium.woff") format("woff");
+    url("../../fonts/Rubik-Medium.woff2") format("woff2"),
+    url("../../fonts/Rubik-Medium.woff") format("woff");
   font-display: swap;
 }
