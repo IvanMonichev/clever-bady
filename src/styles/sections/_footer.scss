@@ -1,0 +1,36 @@
+.footer {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - $margin-container-desktop);
+    max-width: 970px;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+
+  &__privacy-policy {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+
+  &__copyright-text {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  &__developer {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  &__developer-link {
+    color: $color-blue-zodiac
+  }
+}
