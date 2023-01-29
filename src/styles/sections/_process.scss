@@ -81,6 +81,13 @@
     height: 231px;
     overflow: hidden;
     border-radius: 12px;
+
+    &--is-playble {
+      img,
+      button {
+        display: none;
+      }
+    }
   }
 
   &__preview {

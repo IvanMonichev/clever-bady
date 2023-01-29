@@ -1,0 +1,53 @@
+.invitation {
+  min-height: 453px;
+  margin: 130px 0;
+  background-image: url("../../images/invitation-background.png");
+  background-size: 100% 100%;
+
+  &__wrapper {
+    position: relative;
+    width: calc(100% - $margin-container-desktop);
+    max-width: 970px;
+    padding: 100px 0;
+    margin: 0 auto;
+  }
+
+  &__decorate-rainbow {
+    position: absolute;
+    top: 127px;
+    left: -28px;
+    width: 152px;
+    height: 125px;
+  }
+
+  &__decorate-boy {
+    position: absolute;
+    top: 162px;
+    right: 50px;
+    width: 118px;
+    height: 133px;
+  }
+
+  &__title {
+    max-width: 490px;
+    margin: 0 auto 35px;
+    font-family: $font-rubik-family;
+    font-size: 36px;
+    line-height: 1.25;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__description {
+    max-width: 360px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.45;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__btn {
+    margin: 40px auto 0;
+  }
+}

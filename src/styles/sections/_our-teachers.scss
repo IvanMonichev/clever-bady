@@ -8,6 +8,22 @@
     margin: 0 auto;
   }
 
+  &__decorate-pencil {
+    position: absolute;
+    top: 338px;
+    left: -144px;
+    width: 44px;
+    height: 132px;
+  }
+
+  &__decorate-house {
+    position: absolute;
+    top: 0;
+    right: -103px;
+    width: 58px;
+    height: 97px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -16,7 +32,7 @@
 
   &__title {
     font-size: 36px;
-    font-weight: $font-rubik-family;
+    font-family: $font-rubik-family;
     line-height: 1.4;
   }
 
@@ -110,5 +126,4 @@
       }
     }
   }
-
 }

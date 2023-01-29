@@ -22,7 +22,10 @@ export const js = () => {
         rules: [
           {
             test: /\.css$/i,
-            use: ['css-loader'],
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
           },
         ],
       }
