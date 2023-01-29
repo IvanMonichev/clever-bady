@@ -224,6 +224,12 @@
 
 @include small {
   .header {
+    min-height: 77px;
+
+    &::before {
+      height: 77px;
+    }
+
     &__wrapper {
       width: calc(100% - $margin-container-mobile);
       max-width: 576px;
@@ -231,6 +237,10 @@
 
     &__box {
       padding: 35px 0 40px 15px;
+
+      &--is-active {
+        top: 77px;
+      }
     }
 
     &__menu-item {

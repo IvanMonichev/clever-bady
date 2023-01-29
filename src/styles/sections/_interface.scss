@@ -1,0 +1,22 @@
+.interface {
+  &__btn-up {
+    position: fixed;
+    right: -600px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: no-repeat url("../../images/svg/arrow-up.svg") #f8fafb center/60%;
+    border: 3px solid #5879e8;
+    border-radius: 50%;
+    transition: right 1s ease-in-out, opacity 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &--is-show {
+      right: 12px;
+    }
+  }
+}
