@@ -14,6 +14,10 @@
   background-color: $color-white;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 img {
   object-fit: contain;
   max-width: 100%;
