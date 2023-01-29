@@ -1,21 +1,25 @@
+// 1280px
 @mixin extra-large() {
   @media screen and (max-width: $breakpoint_xl) {
     @content;
   }
 }
 
+// 1110px
 @mixin large() {
   @media screen and (max-width: $breakpoint_lg) {
     @content;
   }
 }
 
+// 800px
 @mixin medium() {
   @media screen and (max-width: $breakpoint_md){
     @content;
   }
 }
 
+// 576px
 @mixin small() {
   @media screen and (max-width: $breakpoint_xs) {
     @content;
