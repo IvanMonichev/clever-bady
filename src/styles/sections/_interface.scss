@@ -10,6 +10,7 @@
     border: 3px solid #5879e8;
     border-radius: 50%;
     transition: right 1s ease-in-out, opacity 0.3s;
+    z-index: 100;
 
     &:hover {
       opacity: 0.5;
