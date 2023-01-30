@@ -374,5 +374,74 @@
         top: 255px;
       }
     }
+
+    &__list-item {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+      margin: 0;
+
+      &:nth-child(1) {
+        margin: 0 0 35px;
+
+        &::before {
+          top: 114px;
+          left: -10px;
+          display: block;
+          width: 59px;
+          height: 175px;
+          background-image: url("../../images/svg/decor-arrow-left-one-mobile.svg");
+        }
+
+        h2 {
+          padding: 0;
+        }
+
+        p {
+          padding: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 45px;
+
+        &::before {
+          top: 100px;
+          left: 230px;
+          display: block;
+          width: 46px;
+          height: 80px;
+          background-image: url("../../images/svg/decor-arrow-right-one-mobile.svg");
+        }
+      }
+
+      &:nth-child(3) {
+        padding-right: 48px;
+        margin: 270px 0 0;
+
+        &::before {
+          top: -100px;
+          left: 5px;
+          display: block;
+          width: 57px;
+          height: 72px;
+          background-image: url("../../images/svg/decor-arrow-left-two-mobile.svg");
+        }
+      }
+
+      &:nth-child(4) {
+        padding-left: 91px;
+
+        &::before {
+          top: -234px;
+          left: 210px;
+          display: block;
+          width: 71px;
+          height: 200px;
+          background-image: url("../../images/svg/decor-arrow-right-two-mobile.svg");
+          transform: rotate(5deg);
+        }
+      }
+    }
   }
 }
