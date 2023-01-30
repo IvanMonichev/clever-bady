@@ -62,7 +62,7 @@
 
       &::before {
         position: absolute;
-        top: 110px;
+        top: 138px;
         left: 150px;
         width: 140px;
         height: 105px;
@@ -119,5 +119,260 @@
   &__list-text {
     font-size: 16px;
     line-height: 1.45;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .advantages {
+    &__wrapper {
+      width: calc(100% - $margin-container-tablet);
+      max-width: 1300px;
+    }
+  }
+}
+
+@include large {
+  .advantages {
+    &__list-title {
+      margin: 0 0 15px;
+      font-size: 18px;
+    }
+
+    &__list-text {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    &__list-item {
+      &:nth-child(1) {
+        margin: 81px 0 0;
+
+        h2 {
+          padding-right: 69px;
+        }
+
+        p {
+          padding-right: 145px;
+        }
+
+        &::before {
+          top: -55px;
+          right: 100px;
+          width: 134px;
+          height: 46px;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 150px;
+        margin: 0;
+
+        &::before {
+          top: 116px;
+          left: 163px;
+          width: 69px;
+          height: 52px;
+          transform: rotate(358deg);
+        }
+      }
+
+      &:nth-child(3) {
+        padding-right: 100px;
+        margin: 89px 0 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &:nth-child(4) {
+        padding-left: 150px;
+        margin: 25px 0 0;
+
+        &::before {
+          top: 120px;
+          left: 126px;
+          width: 107px;
+          height: 42px;
+          transform: rotate(340deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .advantages {
+    &__wrapper {
+      &::before {
+        position: absolute;
+        top: 70px;
+        left: calc(50% - 112.5px);
+        width: 100%;
+        max-width: 225px;
+        height: 257px;
+      }
+    }
+
+    &__list-item {
+      &:nth-child(1) {
+        &::before {
+          top: -55px;
+          right: 70px;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 150px;
+        margin: 0;
+
+        &::before {
+          top: 149px;
+          left: 120px;
+        }
+      }
+
+      &:nth-child(3) {
+        padding-right: 100px;
+        margin: 89px 0 0;
+      }
+
+      &:nth-child(4) {
+        &::before {
+          top: 135px;
+          left: 75px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .advantages {
+    &__list-item {
+      &:nth-child(1) {
+        &::before {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          display: none;
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .advantages {
+    margin: 60px 0 0;
+
+    &__wrapper {
+      &::before {
+        top: 200px;
+        left: calc(50% - 92px);
+        width: 184px;
+        height: 210px;
+      }
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__list-item {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+      margin: 0;
+
+      &:nth-child(1) {
+        margin: 0 0 35px;
+
+        h2 {
+          padding: 0;
+        }
+
+        p {
+          padding: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 45px;
+      }
+
+      &:nth-child(3) {
+        padding-right: 48px;
+        margin: 270px 0 0;
+      }
+
+      &:nth-child(4) {
+        padding-left: 91px;
+      }
+    }
+  }
+}
+
+@include small {
+  .advantages {
+    &__wrapper {
+      width: calc(100% - $margin-container-mobile);
+      max-width: 576px;
+
+      &::before {
+        top: 230px;
+      }
+    }
+
+    &__list-item {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+      margin: 0;
+
+      &:nth-child(1) {
+        margin: 0 0 35px;
+
+        h2 {
+          padding: 0;
+        }
+
+        p {
+          padding: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 45px;
+      }
+
+      &:nth-child(3) {
+        padding-right: 48px;
+        margin: 270px 0 0;
+      }
+
+      &:nth-child(4) {
+        padding-left: 91px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .advantages {
+    &__wrapper {
+      &::before {
+        top: 255px;
+      }
+    }
   }
 }
