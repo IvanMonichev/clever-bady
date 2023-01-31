@@ -201,10 +201,8 @@
     }
 
     &__wrapper {
-      position: relative;
       width: calc(100% - $margin-container-mobile);
       max-width: 576px;
-      margin: 0 auto;
     }
 
     &__list-item {

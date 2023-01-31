@@ -11,5 +11,27 @@ const slider = new Swiper('.slider', {
     prevEl: '.slider__navigation-btn--prev'
   },
 
+  breakpoints: {
+    1110: {
+      slidesPerView: 4,
+    },
+
+    800: {
+      slidesPerView: 3,
+    },
+
+    577: {
+      slidesPerView: 2,
+    },
+
+    1: {
+      slidesPerView: 1,
+      autoplay: true,
+    }
+
+  },
+
+
+
   modules: [Navigation]
 })

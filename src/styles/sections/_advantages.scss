@@ -367,6 +367,57 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .advantages {
+    &__list-item {
+      &:nth-child(1) {
+        &::before {
+          top: 114px;
+          left: -10px;
+          display: block;
+          width: 59px;
+          height: 175px;
+          background-image: url("../../images/svg/decor-arrow-left-one-mobile.svg");
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          top: 87px;
+          left: 269px;
+          display: block;
+          width: 46px;
+          height: 80px;
+          background-image: url("../../images/svg/decor-arrow-right-one-mobile.svg");
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          top: -90px;
+          left: 26px;
+          display: block;
+          width: 57px;
+          height: 72px;
+          background-image: url("../../images/svg/decor-arrow-left-two-mobile.svg");
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          top: -202px;
+          left: 257px;
+          display: block;
+          width: 71px;
+          height: 200px;
+          background-image: url("../../images/svg/decor-arrow-right-two-mobile.svg");
+          transform: rotate(5deg);
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 380px) {
   .advantages {
     &__wrapper {
@@ -387,10 +438,6 @@
         &::before {
           top: 114px;
           left: -10px;
-          display: block;
-          width: 59px;
-          height: 175px;
-          background-image: url("../../images/svg/decor-arrow-left-one-mobile.svg");
         }
 
         h2 {
@@ -408,10 +455,6 @@
         &::before {
           top: 100px;
           left: 230px;
-          display: block;
-          width: 46px;
-          height: 80px;
-          background-image: url("../../images/svg/decor-arrow-right-one-mobile.svg");
         }
       }
 
@@ -422,10 +465,6 @@
         &::before {
           top: -100px;
           left: 5px;
-          display: block;
-          width: 57px;
-          height: 72px;
-          background-image: url("../../images/svg/decor-arrow-left-two-mobile.svg");
         }
       }
 
@@ -434,7 +473,7 @@
 
         &::before {
           top: -234px;
-          left: 210px;
+          left: 221px;
           display: block;
           width: 71px;
           height: 200px;

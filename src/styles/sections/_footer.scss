@@ -31,6 +31,41 @@
   }
 
   &__developer-link {
-    color: $color-blue-zodiac
+    color: $color-blue-zodiac;
+  }
+}
+
+@include large {
+  .footer {
+    &__wrapper {
+      width: calc(100% - $margin-container-tablet);
+      max-width: 1100px;
+    }
+  }
+}
+
+@include small {
+  .footer {
+    &__wrapper {
+      flex-direction: column;
+      width: calc(100% - $margin-container-mobile);
+      max-width: 576px;
+    }
+
+    .copyright {
+      margin-bottom: 10px;
+      &__copyright-text {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+
+      &__developer {
+        font-size: 12px;
+      }
+    }
+
+    &__privacy-policy {
+      font-size: 12px;
+    }
   }
 }

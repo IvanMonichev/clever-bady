@@ -26,13 +26,15 @@
 
   &__header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0 57px;
   }
 
   &__title {
-    font-size: 36px;
+    margin-bottom: 30px;
     font-family: $font-rubik-family;
+    font-size: 36px;
     line-height: 1.4;
   }
 
@@ -50,10 +52,6 @@
       grid-auto-flow: column;
       row-gap: 20px;
       list-style: none;
-
-      &--hide {
-
-      }
     }
 
     &__list-item {
@@ -63,7 +61,7 @@
     &__image {
       width: 220px;
       height: 219px;
-      margin: 0 0 20px;
+      margin: 0 auto 20px;
       border-radius: 12px;
 
       img {
@@ -123,6 +121,77 @@
         &:hover {
           transform: translateX(3px);
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .our-teachers {
+    &__wrapper {
+      width: calc(100% - $margin-container-tablet);
+      max-width: 1300px;
+    }
+
+    &__decorate-house {
+      display: none;
+    }
+  }
+}
+
+@include small {
+  .our-teachers {
+    margin-top: 60px;
+
+    &__header {
+      flex-direction: column;
+      margin: 0 0 40px;
+    }
+
+    &__title {
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    &__wrapper {
+      width: calc(100% - $margin-container-mobile);
+      max-width: 576px;
+    }
+
+    &__decorate-house {
+      top: 0;
+      right: 15px;
+      display: block;
+      width: 30px;
+      height: 48px;
+    }
+
+    .slider {
+      &__image {
+        width: 290px;
+        height: 232px;
+      }
+
+      &__name {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+
+      &__country {
+        font-size: 16px;
+      }
+
+      &__navigation {
+        position: absolute;
+        bottom: 20px;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
       }
     }
   }
